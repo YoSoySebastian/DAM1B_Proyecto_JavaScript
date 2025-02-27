@@ -2,24 +2,70 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
+
 .navbar {
-    background-color: #333;
-    overflow: hidden;
-    padding: 10px 0;
+    background-color: #2c2c2c;
+    padding: 10px;
+    font-size: 18px;
 }
+
 .navbar a {
-    color: white;
-    padding: 14px 20px;
+    color: rgb(255, 255, 255);
     text-decoration: none;
+    padding: 10px 15px;
     display: inline-block;
 }
-.navbar a:hover {
-    background-color: #575757;
-}
+
 .container {
-    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
-h1 {
-    font-size: 2em;
+
+h1, p {
+    align-self: flex-start;
+    padding-left: 20px;
+}
+
+#menu-toggle {
+    background-color: #2c2c2c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    display: inline-block;
+    text-decoration: none; 
+    font-size: 18px; 
+    vertical-align: middle;
+}
+
+.menu {
+    display: none;
+    background: white;
+    border: 1px solid #d3d3d3;
+    padding: 10px;
+    position: fixed;
+    top: 26.5%;
+    left: 42%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+.menu button {
+    width: 25px;
+    height: 25px;
+    margin: 1px;
+    padding: 0;
+    cursor: pointer;
+    border: 3px solid black;
+    border-radius: 8px;
+    background-color: white;
+}
+
+
+.menu button:hover {
+    border-color: gold;
+    transform:scaleY(1.2)
 }

@@ -5,17 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú Personalización</title>
     <link rel="stylesheet" href="menu.css">
+    <link href="https://fonts.googleapis.com/css2?family=Futura:wght@400&family=Montserrat:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="navbar">
-        <a href="MenuPersonalizacion.html">Personalizer</a>
-        <a href="FormularioPersonalizacion.html">Form</a>
-        <a href="ImagenPersonalizacion.html">Images</a>
+        <button id="menu-toggle">Personalizador</button>
+        <a href="FormularioPersonalizacion.html">Formulario</a>
+        <a href="ImagenPersonalizacion.html">Imagenes</a>
     </div>
     <div class="container">
-        <h1>Welcome to Personalizer</h1>
-        <p>This is a paragraph that you can adapt its content.</p>
-        <p>Click to Personalizer banner.</p>
+        <h1 id="title">¡Bienvenido al Personalizador!</h1>
+        <p id="text">Esto es un proyecto de javaScript para la clase DAM1B de Sebastian Alfaro</p>
+        <div class="menu" id="menu">
+            <p>Bg Color</p>
+            <button class="color-btn" data-type="bg" data-color="#ffcccc" style="background:#ffcaca"></button>
+            <button class="color-btn" data-type="bg" data-color="#cceeff" style="background:#cceeff"></button>
+            <button class="color-btn" data-type="bg" data-color="#c2f0c2" style="background:#c2f0c2"></button>
+            <button class="color-btn" data-type="bg" data-color="#b4b4b4" style="background:#b4b4b4"></button>
+            <button class="color-btn" data-type="bg" data-color="#474747" style="background:#474747"></button>
+            <p>Texto</p>
+            <button class="color-btn" data-type="text" data-color="red" style="background:rgb(255, 0, 0)"></button>
+            <button class="color-btn" data-type="text" data-color="green" style="background:rgb(0, 140, 0)"></button>
+            <button class="color-btn" data-type="text" data-color="blue" style="background:rgb(0, 0, 255)"></button>
+            <button class="color-btn" data-type="text" data-color="white" style="background:rgb(255, 255, 255)"></button>
+            <button class="color-btn" data-type="text" data-color="black" style="background:rgb(0, 0, 0)"></button>
+            <p></p>
+            <button class="size-btn" data-title-size="20" data-text-size="14">XS</button>
+            <button class="size-btn" data-title-size="24" data-text-size="16">S</button>
+            <button class="size-btn" data-title-size="28" data-text-size="18">M</button>
+            <button class="size-btn" data-title-size="32" data-text-size="20">L</button>
+            <button class="size-btn" data-title-size="36" data-text-size="22">XL</button>                     
+            <p></p>
+            <button class="font-btn" data-font="Arial, sans-serif">A</button>
+            <button class="font-btn" data-font="'Times New Roman', serif">T</button>
+            <button class="font-btn" data-font="'Courier New', monospace">C</button>
+            <button class="font-btn" data-font="'Georgia', serif">G</button>
+            <button class="font-btn" data-font="'Verdana', sans-serif">V</button>            
+        </div>
     </div>
+    <script src="menu.js"></script>
 </body>
 </html>
