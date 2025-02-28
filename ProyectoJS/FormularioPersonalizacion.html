@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Personalización</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="MenuPersonalizacion.html">Personalizador</a>
+        <a href="FormularioPersonalizacion.html">Formulario</a>
+        <a href="ImagenPersonalizacion.html">Imagenes</a>
+        <button id="toggle-mode">Modo</button>
+    </div>
+
+    <main class="form-container">
+        <form>
+          <div class="form-row">
+            <label for="name">Nombre completo:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name">
+          </div>
+    
+          <div class="form-row">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email">
+          </div>
+        
+          <div class="form-row">
+            <button type="button" id="validate-email" class="submit-btn">Validar</button>
+            <p id="validation-message" class="validation-message"></p>
+          </div>
+        
+    
+          <div class="form-row">
+            <label>Género:</label>
+            <div class="form-group">
+              <input type="radio" id="male" name="gender" value="male">
+              <label for="male">Male</label>
+    
+              <input type="radio" id="female" name="gender" value="female">
+              <label for="female">Female</label>
+    
+              <input type="radio" id="other" name="gender" value="other">
+              <label for="other">Otro</label>
+            </div>
+          </div>
+    
+          <div class="form-row">
+            <label for="country">País:</label>
+            <select id="country" name="country">
+              <option value="">Selecciona tu país</option>
+              <option value="us">Estados Unidos</option>
+              <option value="uk">Reino Unido</option>
+              <option value="canada">Canada</option>
+              <option value="es">España</option>
+            </select>
+          </div>
+
+          <div class="form-row" id="province-row" style="display: none;">
+            <label for="province">Provincia:</label>
+            <select id="province" name="province">
+                <option value="">Selecciona una provincia</option>
+                <option value="madrid">Madrid</option>
+                <option value="pamplona">Navarra</option>
+                <option value="barcelona">Barcelona</option>
+            </select>
+          </div>
+
+          <div class="form-row" id="city-row" style="display: none;">
+            <label for="city">Ciudad:</label>
+            <select id="city" name="city">
+                <option value="">Selecciona una ciudad</option>
+                <option value="pamplona">Pamplona</option>
+            </select>
+          </div>
+    
+          <div class="form-row">
+            <a href="MenuPersonalizacion.html" class="submit-btn">Registrar</a>
+        </div>
+        </form>
+      </main>
+      <script src="form.js"></script> 
+</body>
+</html>

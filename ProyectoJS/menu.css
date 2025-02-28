@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.navbar {
+  width: 100%;
+  background-color: #1f1f1f;
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 16px;
+}
+
+.navbar a:hover {
+  background-color: #575757;
+  border-radius: 5px;
+}
+
+.navbar button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.card button {
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.container {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+h1, p {
+    align-self: flex-start;
+    padding-left: 20px;
+}
+
+#menu-toggle {
+    background-color: #1f1f1f;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 18px;
+    vertical-align: middle;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#menu-toggle:hover {
+    background-color: #007bff;
+}
+
+.menu {
+    display: none;
+    background: white;
+    border: 1px solid #d3d3d3;
+    padding: 10px;
+    position: fixed;
+    top: 1%;
+    right: 1%;
+    transform: translate(-50%, 0);
+    z-index: 1000;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu button {
+    width: 25px;
+    height: 25px;
+    margin: 1px;
+    padding: 0;
+    cursor: pointer;
+    border: 3px solid black;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.menu button:hover {
+    border-color: gold;
+    transform: scale(1.2);
+}
