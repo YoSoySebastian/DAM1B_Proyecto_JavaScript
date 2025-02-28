@@ -8,14 +8,24 @@
 </head>
 <body>
     <div class="navbar">
-        <a href="MenuPersonalizacion.html">Personalizer</a>
-        <a href="FormularioPersonalizacion.html">Form</a>
-        <a href="ImagenPersonalizacion.html">Images</a>
+        <a href="MenuPersonalizacion.html">Personalizador</a>
+        <a href="FormularioPersonalizacion.html">Formulario</a>
+        <a href="ImagenPersonalizacion.html">Imagenes</a>
+        <button id="toggle-mode">Modo</button>
     </div>
     <div class="container">
-        <h1>Welcome to Images</h1>
-        <p>This is a paragraph that you can adapt its content.</p>
-        <p>Click to Personalizer banner.</p>
+        <div class="card">
+            <h2>Botón Mágico: Crea y cambia la imagen</h2>
+            <button id="changeImageButton" class="action-btn">Cambiar imagen</button>
+            <br>
+            <img id="pokemonImage" src="charmander.png">
+        </div>
+
+        <div class="card">
+            <h2>Cargando</h2>
+            <img id="pokemonAutoImage" src="charmander.png">
+        </div>
     </div>
+    <script src="imagen.js"></script>
 </body>
 </html>

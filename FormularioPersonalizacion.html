@@ -8,19 +8,16 @@
 </head>
 <body>
     <div class="navbar">
-        <a href="MenuPersonalizacion.html">Personalizer</a>
-        <a href="FormularioPersonalizacion.html">Form</a>
-        <a href="ImagenPersonalizacion.html">Images</a>
-        <input type="radio" id="light-mode" name="tema" value="light">
-        <label for="light-mode">Light</label>
-        <input type="radio" id="dark-mode" name="tema" value="dark" checked>
-        <label for="dark-mode">Dark</label>
+        <a href="MenuPersonalizacion.html">Personalizador</a>
+        <a href="FormularioPersonalizacion.html">Formulario</a>
+        <a href="ImagenPersonalizacion.html">Imagenes</a>
+        <button id="toggle-mode">Modo</button>
     </div>
 
     <main class="form-container">
         <form>
           <div class="form-row">
-            <label for="name">Full Name:</label>
+            <label for="name">Nombre completo:</label>
             <input type="text" id="name" name="name" placeholder="Enter your full name">
           </div>
     
@@ -28,14 +25,15 @@
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" placeholder="Enter your email">
           </div>
-    
+        
           <div class="form-row">
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" placeholder="Create a password">
+            <button type="button" id="validate-email" class="submit-btn">Validar</button>
+            <p id="validation-message" class="validation-message"></p>
           </div>
+        
     
           <div class="form-row">
-            <label>Gender:</label>
+            <label>Género:</label>
             <div class="form-group">
               <input type="radio" id="male" name="gender" value="male">
               <label for="male">Male</label>
@@ -44,63 +42,44 @@
               <label for="female">Female</label>
     
               <input type="radio" id="other" name="gender" value="other">
-              <label for="other">Other</label>
+              <label for="other">Otro</label>
             </div>
           </div>
     
           <div class="form-row">
-            <label>Hobbies:</label>
-            <div class="form-group">
-              <input type="checkbox" id="reading" name="hobbies" value="reading">
-              <label for="reading">Reading</label>
-    
-              <input type="checkbox" id="sports" name="hobbies" value="sports">
-              <label for="sports">Sports</label>
-    
-              <input type="checkbox" id="gaming" name="hobbies" value="gaming">
-              <label for="gaming">Gaming</label>
-            </div>
-          </div>
-    
-          <div class="form-row">
-            <label for="country">Country:</label>
+            <label for="country">País:</label>
             <select id="country" name="country">
-              <option value="">Select your country</option>
-              <option value="us">United States</option>
-              <option value="uk">United Kingdom</option>
+              <option value="">Selecciona tu país</option>
+              <option value="us">Estados Unidos</option>
+              <option value="uk">Reino Unido</option>
               <option value="canada">Canada</option>
-              <option value="australia">Australia</option>
+              <option value="es">España</option>
+            </select>
+          </div>
+
+          <div class="form-row" id="province-row" style="display: none;">
+            <label for="province">Provincia:</label>
+            <select id="province" name="province">
+                <option value="">Selecciona una provincia</option>
+                <option value="madrid">Madrid</option>
+                <option value="pamplona">Navarra</option>
+                <option value="barcelona">Barcelona</option>
+            </select>
+          </div>
+
+          <div class="form-row" id="city-row" style="display: none;">
+            <label for="city">Ciudad:</label>
+            <select id="city" name="city">
+                <option value="">Selecciona una ciudad</option>
+                <option value="pamplona">Pamplona</option>
             </select>
           </div>
     
           <div class="form-row">
-            <button type="submit" class="submit-btn">Register</button>
-          </div>
+            <a href="MenuPersonalizacion.html" class="submit-btn">Registrar</a>
+        </div>
         </form>
       </main>
-
+      <script src="form.js"></script> 
 </body>
 </html>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const lightMode = document.getElementById("light-mode");
-      const darkMode = document.getElementById("dark-mode");
-      const body = document.body;
-  
-      function updateTheme() {
-        if (lightMode.checked) {
-          body.classList.remove("dark");
-          body.classList.add("light");
-        } else if (darkMode.checked) {
-          body.classList.remove("light");
-          body.classList.add("dark");
-        }
-      }
-  
-      lightMode.addEventListener("change", updateTheme);
-      darkMode.addEventListener("change", updateTheme);
-  
-      updateTheme();
-    });
-  </script>
